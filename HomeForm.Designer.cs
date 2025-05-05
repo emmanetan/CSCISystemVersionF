@@ -49,10 +49,10 @@
             // siticoneLabel1
             // 
             this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.siticoneLabel1.Font = new System.Drawing.Font("Satoshi", 18F);
             this.siticoneLabel1.Location = new System.Drawing.Point(55, 29);
             this.siticoneLabel1.Name = "siticoneLabel1";
-            this.siticoneLabel1.Size = new System.Drawing.Size(64, 30);
+            this.siticoneLabel1.Size = new System.Drawing.Size(67, 32);
             this.siticoneLabel1.TabIndex = 0;
             this.siticoneLabel1.Text = "Home";
             // 

@@ -11,7 +11,8 @@ namespace AntdUIDemo
     {
         public InventoryMangement()
         {
-            InitializeComponent();      
+            InitializeComponent();
+            Loadform(new HomeForm());
         }
 
         private void loadingTimer_Tick(object sender, EventArgs e)
@@ -29,7 +30,7 @@ namespace AntdUIDemo
             this.mainPanel.Controls.Add(window);
             this.mainPanel.Tag = window;
             window.Show();
-        }
+        }     
 
         bool reportExpand = false;
         private void dropDownTimer_Tick(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace AntdUIDemo
 
         private void UserBtn_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void ReportBtn_Click(object sender, EventArgs e)
