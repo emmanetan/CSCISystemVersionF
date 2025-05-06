@@ -67,7 +67,7 @@ namespace AntdUIDemo
 
         private void UserBtn_Click(object sender, EventArgs e)
         {
-            
+            Loadform(new UserForm());
         }
 
         private void ReportBtn_Click(object sender, EventArgs e)

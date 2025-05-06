@@ -37,5 +37,10 @@ namespace AntdUIDemo
             gridViewProductList.Rows.Add("D001", "Coke", "Beverage", "2025-01-01", "2028-05-05", 40, 100.00);
 
         }
+
+        private void AddProductBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
