@@ -178,6 +178,7 @@
             this.HomeBtn.ImageSize = new System.Drawing.Size(22, 21);
             this.HomeBtn.Location = new System.Drawing.Point(6, 3);
             this.HomeBtn.Name = "HomeBtn";
+            this.HomeBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.HomeBtn.ShadowDecoration.Parent = this.HomeBtn;
             this.HomeBtn.Size = new System.Drawing.Size(258, 40);
             this.HomeBtn.TabIndex = 0;
@@ -203,6 +204,7 @@
             this.ProductBtn.ImageSize = new System.Drawing.Size(22, 21);
             this.ProductBtn.Location = new System.Drawing.Point(6, 49);
             this.ProductBtn.Name = "ProductBtn";
+            this.ProductBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.ProductBtn.ShadowDecoration.Parent = this.ProductBtn;
             this.ProductBtn.Size = new System.Drawing.Size(258, 40);
             this.ProductBtn.TabIndex = 1;
@@ -228,6 +230,7 @@
             this.UserBtn.ImageSize = new System.Drawing.Size(22, 21);
             this.UserBtn.Location = new System.Drawing.Point(6, 95);
             this.UserBtn.Name = "UserBtn";
+            this.UserBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.UserBtn.ShadowDecoration.Parent = this.UserBtn;
             this.UserBtn.Size = new System.Drawing.Size(258, 40);
             this.UserBtn.TabIndex = 2;
@@ -253,6 +256,7 @@
             this.ReportBtn.ImageSize = new System.Drawing.Size(22, 21);
             this.ReportBtn.Location = new System.Drawing.Point(6, 141);
             this.ReportBtn.Name = "ReportBtn";
+            this.ReportBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.ReportBtn.ShadowDecoration.Parent = this.ReportBtn;
             this.ReportBtn.Size = new System.Drawing.Size(258, 40);
             this.ReportBtn.TabIndex = 3;
@@ -278,6 +282,7 @@
             this.InventoryRBtn.ImageSize = new System.Drawing.Size(22, 21);
             this.InventoryRBtn.Location = new System.Drawing.Point(47, 187);
             this.InventoryRBtn.Name = "InventoryRBtn";
+            this.InventoryRBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.InventoryRBtn.ShadowDecoration.Parent = this.InventoryRBtn;
             this.InventoryRBtn.Size = new System.Drawing.Size(217, 40);
             this.InventoryRBtn.TabIndex = 4;
@@ -303,6 +308,7 @@
             this.SalesBtn.ImageSize = new System.Drawing.Size(22, 21);
             this.SalesBtn.Location = new System.Drawing.Point(47, 233);
             this.SalesBtn.Name = "SalesBtn";
+            this.SalesBtn.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.SalesBtn.ShadowDecoration.Parent = this.SalesBtn;
             this.SalesBtn.Size = new System.Drawing.Size(217, 40);
             this.SalesBtn.TabIndex = 5;
