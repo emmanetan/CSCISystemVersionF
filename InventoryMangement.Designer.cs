@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoryMangement));
             this.titlebar = new AntdUI.PageHeader();
-            this.siticoneControlBox3 = new Siticone.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox2 = new Siticone.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.UI.WinForms.SiticoneControlBox();
             this.siticonePanel1 = new Siticone.UI.WinForms.SiticonePanel();
@@ -58,13 +57,14 @@
             // 
             this.titlebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.titlebar.CloseSize = 35;
-            this.titlebar.Controls.Add(this.siticoneControlBox3);
             this.titlebar.Controls.Add(this.siticoneControlBox2);
             this.titlebar.Controls.Add(this.siticoneControlBox1);
             this.titlebar.DividerShow = true;
             this.titlebar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.titlebar.DragMove = false;
             this.titlebar.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.titlebar.Location = new System.Drawing.Point(0, 0);
+            this.titlebar.MaximizeBox = false;
             this.titlebar.Name = "titlebar";
             this.titlebar.ShowIcon = true;
             this.titlebar.Size = new System.Drawing.Size(1160, 29);
@@ -73,23 +73,10 @@
             this.titlebar.TabIndex = 1;
             this.titlebar.Text = "WiseMart";
             // 
-            // siticoneControlBox3
-            // 
-            this.siticoneControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticoneControlBox3.ControlBoxType = Siticone.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.siticoneControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.siticoneControlBox3.HoveredState.Parent = this.siticoneControlBox3;
-            this.siticoneControlBox3.IconColor = System.Drawing.Color.Black;
-            this.siticoneControlBox3.Location = new System.Drawing.Point(1013, -1);
-            this.siticoneControlBox3.Name = "siticoneControlBox3";
-            this.siticoneControlBox3.ShadowDecoration.Parent = this.siticoneControlBox3;
-            this.siticoneControlBox3.Size = new System.Drawing.Size(49, 29);
-            this.siticoneControlBox3.TabIndex = 4;
-            // 
             // siticoneControlBox2
             // 
             this.siticoneControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticoneControlBox2.ControlBoxType = Siticone.UI.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.siticoneControlBox2.ControlBoxType = Siticone.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.siticoneControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.siticoneControlBox2.HoveredState.Parent = this.siticoneControlBox2;
             this.siticoneControlBox2.IconColor = System.Drawing.Color.Black;
@@ -359,7 +346,6 @@
         #endregion
 
         private AntdUI.PageHeader titlebar;
-        private Siticone.UI.WinForms.SiticoneControlBox siticoneControlBox3;
         private Siticone.UI.WinForms.SiticoneControlBox siticoneControlBox2;
         private Siticone.UI.WinForms.SiticoneControlBox siticoneControlBox1;
         private Siticone.UI.WinForms.SiticonePanel siticonePanel1;
