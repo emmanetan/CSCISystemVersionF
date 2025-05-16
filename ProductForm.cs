@@ -1,4 +1,5 @@
 ﻿using AntdUI;
+using CSCISystem1._1;
 using Microsoft.Win32;
 using System;
 using System.CodeDom;
@@ -40,6 +41,8 @@ namespace AntdUIDemo
 
         private void AddProductBtn_Click(object sender, EventArgs e)
         {
+            AddProductForm addProductForm = new AddProductForm();
+            addProductForm.ShowDialog();
 
         }
     }

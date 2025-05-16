@@ -59,12 +59,12 @@
             // HomeForm
             // 
             this.ClientSize = new System.Drawing.Size(821, 655);
-            this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.Dark = true;
             this.EnableHitTest = false;
             this.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Mode = AntdUI.TAMode.Dark;
             this.Name = "HomeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
