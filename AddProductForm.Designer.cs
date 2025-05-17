@@ -35,14 +35,17 @@
             this.txtPrice = new AntdUI.InputNumber();
             this.button1 = new AntdUI.Button();
             this.txtQuantity = new AntdUI.InputNumber();
-            this.dtpExpDate = new AntdUI.DatePicker();
-            this.dtpMfgDate = new AntdUI.DatePicker();
-            this.comboBoxCategory = new AntdUI.Select();
             this.txtProductName = new AntdUI.Input();
             this.input1 = new AntdUI.Input();
             this.titlebar = new AntdUI.PageHeader();
             this.siticoneControlBox3 = new Siticone.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.UI.WinForms.SiticoneControlBox();
+            this.select1 = new AntdUI.Select();
+            this.select2 = new AntdUI.Select();
+            this.select3 = new AntdUI.Select();
+            this.select4 = new AntdUI.Select();
+            this.select5 = new AntdUI.Select();
+            this.select6 = new AntdUI.Select();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.titlebar.SuspendLayout();
@@ -50,14 +53,17 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.select4);
+            this.panel1.Controls.Add(this.select5);
+            this.panel1.Controls.Add(this.select6);
+            this.panel1.Controls.Add(this.select3);
+            this.panel1.Controls.Add(this.select2);
+            this.panel1.Controls.Add(this.select1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txtTotalPrice);
             this.panel1.Controls.Add(this.txtPrice);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtQuantity);
-            this.panel1.Controls.Add(this.dtpExpDate);
-            this.panel1.Controls.Add(this.dtpMfgDate);
-            this.panel1.Controls.Add(this.comboBoxCategory);
             this.panel1.Controls.Add(this.txtProductName);
             this.panel1.Controls.Add(this.input1);
             this.panel1.Controls.Add(this.titlebar);
@@ -166,33 +172,6 @@
             0});
             this.txtQuantity.Leave += new System.EventHandler(this.txtQuantity_Leave);
             // 
-            // dtpExpDate
-            // 
-            this.dtpExpDate.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.dtpExpDate.Location = new System.Drawing.Point(57, 319);
-            this.dtpExpDate.Name = "dtpExpDate";
-            this.dtpExpDate.PlaceholderText = "Expiration Date";
-            this.dtpExpDate.Size = new System.Drawing.Size(375, 55);
-            this.dtpExpDate.TabIndex = 10;
-            // 
-            // dtpMfgDate
-            // 
-            this.dtpMfgDate.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.dtpMfgDate.Location = new System.Drawing.Point(57, 258);
-            this.dtpMfgDate.Name = "dtpMfgDate";
-            this.dtpMfgDate.PlaceholderText = "Manufacturing Date";
-            this.dtpMfgDate.Size = new System.Drawing.Size(375, 55);
-            this.dtpMfgDate.TabIndex = 9;
-            // 
-            // comboBoxCategory
-            // 
-            this.comboBoxCategory.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.comboBoxCategory.Location = new System.Drawing.Point(57, 197);
-            this.comboBoxCategory.Name = "comboBoxCategory";
-            this.comboBoxCategory.PlaceholderText = "Category";
-            this.comboBoxCategory.Size = new System.Drawing.Size(375, 55);
-            this.comboBoxCategory.TabIndex = 8;
-            // 
             // txtProductName
             // 
             this.txtProductName.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -253,6 +232,60 @@
             this.siticoneControlBox1.Size = new System.Drawing.Size(45, 29);
             this.siticoneControlBox1.TabIndex = 6;
             // 
+            // select1
+            // 
+            this.select1.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.select1.Location = new System.Drawing.Point(57, 258);
+            this.select1.Name = "select1";
+            this.select1.PlaceholderText = "Day";
+            this.select1.Size = new System.Drawing.Size(127, 55);
+            this.select1.TabIndex = 17;
+            // 
+            // select2
+            // 
+            this.select2.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.select2.Location = new System.Drawing.Point(181, 258);
+            this.select2.Name = "select2";
+            this.select2.PlaceholderText = "Month";
+            this.select2.Size = new System.Drawing.Size(127, 55);
+            this.select2.TabIndex = 18;
+            // 
+            // select3
+            // 
+            this.select3.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.select3.Location = new System.Drawing.Point(305, 258);
+            this.select3.Name = "select3";
+            this.select3.PlaceholderText = "Year";
+            this.select3.Size = new System.Drawing.Size(127, 55);
+            this.select3.TabIndex = 19;
+            // 
+            // select4
+            // 
+            this.select4.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.select4.Location = new System.Drawing.Point(305, 319);
+            this.select4.Name = "select4";
+            this.select4.PlaceholderText = "Year";
+            this.select4.Size = new System.Drawing.Size(127, 55);
+            this.select4.TabIndex = 22;
+            // 
+            // select5
+            // 
+            this.select5.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.select5.Location = new System.Drawing.Point(181, 319);
+            this.select5.Name = "select5";
+            this.select5.PlaceholderText = "Month";
+            this.select5.Size = new System.Drawing.Size(127, 55);
+            this.select5.TabIndex = 21;
+            // 
+            // select6
+            // 
+            this.select6.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.select6.Location = new System.Drawing.Point(57, 319);
+            this.select6.Name = "select6";
+            this.select6.PlaceholderText = "Day";
+            this.select6.Size = new System.Drawing.Size(127, 55);
+            this.select6.TabIndex = 20;
+            // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,14 +314,17 @@
         private Siticone.UI.WinForms.SiticoneControlBox siticoneControlBox1;
         private AntdUI.Input txtProductName;
         private AntdUI.Input input1;
-        private AntdUI.Select comboBoxCategory;
-        private AntdUI.DatePicker dtpExpDate;
-        private AntdUI.DatePicker dtpMfgDate;
         private AntdUI.InputNumber txtQuantity;
         private AntdUI.Button button1;
         private AntdUI.InputNumber txtPrice;
         private AntdUI.InputNumber txtTotalPrice;
         private AntdUI.Panel panel2;
         private AntdUI.UploadDragger uploadDragger1;
+        private AntdUI.Select select1;
+        private AntdUI.Select select4;
+        private AntdUI.Select select5;
+        private AntdUI.Select select6;
+        private AntdUI.Select select3;
+        private AntdUI.Select select2;
     }
 }
