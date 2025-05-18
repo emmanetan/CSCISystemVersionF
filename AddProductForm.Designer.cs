@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProductForm));
             this.panel1 = new AntdUI.Panel();
             this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel2 = new Siticone.UI.WinForms.SiticoneLabel();
@@ -79,7 +78,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(10, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(855, 674);
+            this.panel1.Size = new System.Drawing.Size(793, 674);
             this.panel1.TabIndex = 0;
             this.panel1.Text = "panel1";
             // 
@@ -139,7 +138,7 @@
             this.panel2.Location = new System.Drawing.Point(498, 265);
             this.panel2.Name = "panel2";
             this.panel2.Radius = 8;
-            this.panel2.Size = new System.Drawing.Size(312, 319);
+            this.panel2.Size = new System.Drawing.Size(230, 319);
             this.panel2.TabIndex = 16;
             this.panel2.Text = "panel2";
             // 
@@ -152,7 +151,7 @@
             this.uploadDragger1.Location = new System.Drawing.Point(3, 235);
             this.uploadDragger1.Multiselect = false;
             this.uploadDragger1.Name = "uploadDragger1";
-            this.uploadDragger1.Size = new System.Drawing.Size(306, 82);
+            this.uploadDragger1.Size = new System.Drawing.Size(224, 82);
             this.uploadDragger1.TabIndex = 17;
             this.uploadDragger1.Text = "Upload";
             this.uploadDragger1.TextDesc = "";
@@ -203,6 +202,7 @@
             // 
             this.button1.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             this.button1.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button1.Location = new System.Drawing.Point(166, 604);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 42);
@@ -237,7 +237,7 @@
             this.txtProductName.Location = new System.Drawing.Point(57, 172);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.PlaceholderText = "\"Coke\"";
-            this.txtProductName.Size = new System.Drawing.Size(753, 55);
+            this.txtProductName.Size = new System.Drawing.Size(668, 55);
             this.txtProductName.TabIndex = 7;
             // 
             // input1
@@ -246,7 +246,7 @@
             this.input1.Location = new System.Drawing.Point(57, 87);
             this.input1.Name = "input1";
             this.input1.PlaceholderText = "\"0001700D\"";
-            this.input1.Size = new System.Drawing.Size(753, 55);
+            this.input1.Size = new System.Drawing.Size(671, 55);
             this.input1.TabIndex = 6;
             // 
             // titlebar
@@ -260,7 +260,7 @@
             this.titlebar.MaximizeBox = false;
             this.titlebar.Name = "titlebar";
             this.titlebar.ShowIcon = true;
-            this.titlebar.Size = new System.Drawing.Size(855, 27);
+            this.titlebar.Size = new System.Drawing.Size(793, 27);
             this.titlebar.SubText = "";
             this.titlebar.TabIndex = 5;
             this.titlebar.Text = "Add Product";
@@ -272,7 +272,7 @@
             this.siticoneControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
             this.siticoneControlBox3.HoveredState.Parent = this.siticoneControlBox3;
             this.siticoneControlBox3.IconColor = System.Drawing.Color.Black;
-            this.siticoneControlBox3.Location = new System.Drawing.Point(765, -1);
+            this.siticoneControlBox3.Location = new System.Drawing.Point(703, -1);
             this.siticoneControlBox3.Name = "siticoneControlBox3";
             this.siticoneControlBox3.ShadowDecoration.Parent = this.siticoneControlBox3;
             this.siticoneControlBox3.Size = new System.Drawing.Size(45, 29);
@@ -285,7 +285,7 @@
             this.siticoneControlBox1.HoveredState.FillColor = System.Drawing.Color.Red;
             this.siticoneControlBox1.HoveredState.Parent = this.siticoneControlBox1;
             this.siticoneControlBox1.IconColor = System.Drawing.Color.Black;
-            this.siticoneControlBox1.Location = new System.Drawing.Point(810, -1);
+            this.siticoneControlBox1.Location = new System.Drawing.Point(748, -1);
             this.siticoneControlBox1.Name = "siticoneControlBox1";
             this.siticoneControlBox1.ShadowDecoration.Parent = this.siticoneControlBox1;
             this.siticoneControlBox1.Size = new System.Drawing.Size(45, 29);
@@ -333,11 +333,10 @@
             // 
             // siticonePictureBox1
             // 
-            this.siticonePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("siticonePictureBox1.Image")));
             this.siticonePictureBox1.Location = new System.Drawing.Point(3, 5);
             this.siticonePictureBox1.Name = "siticonePictureBox1";
             this.siticonePictureBox1.ShadowDecoration.Parent = this.siticonePictureBox1;
-            this.siticonePictureBox1.Size = new System.Drawing.Size(306, 224);
+            this.siticonePictureBox1.Size = new System.Drawing.Size(224, 224);
             this.siticonePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.siticonePictureBox1.TabIndex = 18;
             this.siticonePictureBox1.TabStop = false;
@@ -348,7 +347,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(875, 687);
+            this.ClientSize = new System.Drawing.Size(813, 687);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddProductForm";
