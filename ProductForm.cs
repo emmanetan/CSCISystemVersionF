@@ -9,20 +9,21 @@ using System.Windows.Forms;
 using System.Drawing;
 using Microsoft.Data.SqlClient;
 
+
 namespace AntdUIDemo
 {
     public partial class ProductForm : AntdUI.Window
     {
-
         SqlConnection con = new SqlConnection("Data Source = EMMAN\\SQLEXPRESS; Initial Catalog = DB_System; Integrated Security = True; Encrypt=True;Trust Server Certificate=True");
         SqlCommand cmd;
+
         public ProductForm()
         {
             InitializeComponent();
             InitializeDataGridView();
         }
 
-        private void InitializeDataGridView()
+        public void InitializeDataGridView()
         {
             gridViewProductList.Columns.Add("ProductCode", "Item Code");
             gridViewProductList.Columns.Add("ProductName", "Item Name");
@@ -33,7 +34,7 @@ namespace AntdUIDemo
 
             con.Open();
             string query = "SELECT ProductCode, ProductName, ExpDate, Quantity, Price, TotalPrice FROM tb_product";
-            SqlCommand cmd = new SqlCommand(query, con);
+            cmd = new SqlCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
 
             while (reader.Read())

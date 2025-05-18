@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProductForm));
             this.panel1 = new AntdUI.Panel();
             this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel2 = new Siticone.UI.WinForms.SiticoneLabel();
@@ -49,9 +50,11 @@
             this.siticoneLabel4 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel5 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel6 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.siticonePictureBox1 = new Siticone.UI.WinForms.SiticonePictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.titlebar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -131,11 +134,12 @@
             // 
             this.panel2.Back = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.siticonePictureBox1);
             this.panel2.Controls.Add(this.uploadDragger1);
-            this.panel2.Location = new System.Drawing.Point(498, 286);
+            this.panel2.Location = new System.Drawing.Point(498, 265);
             this.panel2.Name = "panel2";
             this.panel2.Radius = 8;
-            this.panel2.Size = new System.Drawing.Size(312, 283);
+            this.panel2.Size = new System.Drawing.Size(312, 319);
             this.panel2.TabIndex = 16;
             this.panel2.Text = "panel2";
             // 
@@ -145,7 +149,7 @@
             this.uploadDragger1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.uploadDragger1.Font = new System.Drawing.Font("Satoshi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.uploadDragger1.IconRatio = 2F;
-            this.uploadDragger1.Location = new System.Drawing.Point(3, 198);
+            this.uploadDragger1.Location = new System.Drawing.Point(3, 235);
             this.uploadDragger1.Multiselect = false;
             this.uploadDragger1.Name = "uploadDragger1";
             this.uploadDragger1.Size = new System.Drawing.Size(306, 82);
@@ -177,6 +181,11 @@
             this.txtPrice.DecimalPlaces = 2;
             this.txtPrice.Font = new System.Drawing.Font("Satoshi", 12F);
             this.txtPrice.Location = new System.Drawing.Point(57, 439);
+            this.txtPrice.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PlaceholderText = "Price";
             this.txtPrice.Size = new System.Drawing.Size(375, 55);
@@ -236,7 +245,7 @@
             this.input1.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input1.Location = new System.Drawing.Point(57, 87);
             this.input1.Name = "input1";
-            this.input1.PlaceholderText = "\"0388212P\"";
+            this.input1.PlaceholderText = "\"0001700D\"";
             this.input1.Size = new System.Drawing.Size(753, 55);
             this.input1.TabIndex = 6;
             // 
@@ -322,6 +331,17 @@
             this.siticoneLabel6.TabIndex = 29;
             this.siticoneLabel6.Text = "Item Code";
             // 
+            // siticonePictureBox1
+            // 
+            this.siticonePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("siticonePictureBox1.Image")));
+            this.siticonePictureBox1.Location = new System.Drawing.Point(3, 5);
+            this.siticonePictureBox1.Name = "siticonePictureBox1";
+            this.siticonePictureBox1.ShadowDecoration.Parent = this.siticonePictureBox1;
+            this.siticonePictureBox1.Size = new System.Drawing.Size(306, 224);
+            this.siticonePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.siticonePictureBox1.TabIndex = 18;
+            this.siticonePictureBox1.TabStop = false;
+            // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,6 +359,7 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.titlebar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -366,5 +387,6 @@
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel6;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel5;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel4;
+        private Siticone.UI.WinForms.SiticonePictureBox siticonePictureBox1;
     }
 }

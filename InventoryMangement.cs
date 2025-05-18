@@ -4,15 +4,24 @@ using System;
 using System.CodeDom;
 using System.Linq;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
+using System.Drawing;
+using CSCISystem1._1;
+
 
 namespace AntdUIDemo
 {
     public partial class InventoryMangement : AntdUI.Window
     {
+        SqlConnection con = new SqlConnection("Data Source = EMMAN\\SQLEXPRESS; Initial Catalog = DB_System; Integrated Security = True; Encrypt=True;Trust Server Certificate=True");
+        SqlCommand cmd;
+
         public InventoryMangement()
         {
             InitializeComponent();
+            
             Loadform(new HomeForm());
+            
         }
 
         private void loadingTimer_Tick(object sender, EventArgs e)
