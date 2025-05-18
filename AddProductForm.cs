@@ -15,9 +15,12 @@ namespace CSCISystem1._1
         public AddProductForm()
         {
             InitializeComponent();
-            
             RadiusForm();
             CalculateTotalPrice();
+            LoadDay();
+            LoadMonth();
+            LoadYear();
+            
         }        
 
         private void RadiusForm()
@@ -37,7 +40,12 @@ namespace CSCISystem1._1
 
         private void CalculateTotalPrice()
         {
-            if (int.TryParse(txtQuantity.Text, out int quantity) && decimal.TryParse(txtPrice.Text, out decimal price))
+            string quantityText = txtQuantity.Text.Trim();
+            string priceText = txtPrice.Text.Trim();
+
+            if (int.TryParse(quantityText, out int quantity) &&
+                decimal.TryParse(priceText, out decimal price) &&
+                quantity > 0 && price > 0)
             {
                 decimal totalPrice = quantity * price;
                 txtTotalPrice.Text = totalPrice.ToString("0.00");
@@ -56,6 +64,39 @@ namespace CSCISystem1._1
         private void txtQuantity_Leave(object sender, EventArgs e)
         {
             CalculateTotalPrice();
+        }
+
+        private void LoadDay()
+        {
+            
+            dayComboBox.SelectedIndex = 0;
+
+            // looping from 1 to 31
+            for (int i = 1; i <= 31; i++)
+            {
+                dayComboBox.Items.Add(i);
+            }
+        }
+        private void LoadMonth()
+        {
+            
+            monthComboBox.SelectedIndex = 0;
+
+            // looping from 1 to 12
+            for (int i = 1; i <= 12; i++)
+            {
+                monthComboBox.Items.Add(i);
+            }
+        }
+        private void LoadYear()
+        {
+            // looping from 2025 to 1900
+            
+            yearComboBox.SelectedIndex = 0;
+            for (int i = 2045; i >= 2025; i--)
+            {
+                yearComboBox.Items.Add(i);
+            }
         }
     }
 }

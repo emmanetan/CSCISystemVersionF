@@ -3,13 +3,19 @@ using CSCISystem1._1;
 using Microsoft.Win32;
 using System;
 using System.CodeDom;
+using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using System.Drawing;
+using Microsoft.Data.SqlClient;
 
 namespace AntdUIDemo
 {
     public partial class ProductForm : AntdUI.Window
     {
+
+        SqlConnection con = new SqlConnection("Data Source = EMMAN\\SQLEXPRESS; Initial Catalog = DB_System; Integrated Security = True; Encrypt=True;Trust Server Certificate=True");
+        SqlCommand cmd;
         public ProductForm()
         {
             InitializeComponent();
@@ -18,24 +24,31 @@ namespace AntdUIDemo
 
         private void InitializeDataGridView()
         {
-
-            gridViewProductList.Columns.Add("ProductCode", "Product Code");
-            gridViewProductList.Columns.Add("ProductName", "Product Name");
-            gridViewProductList.Columns.Add("MfgDate", "Manufacturing Date");
+            gridViewProductList.Columns.Add("ProductCode", "Item Code");
+            gridViewProductList.Columns.Add("ProductName", "Item Name");
             gridViewProductList.Columns.Add("ExpDate", "Expiration Date");
-            gridViewProductList.Columns.Add("Quantity", "Qty.");
-            gridViewProductList.Columns.Add("Price", "Price");
+            gridViewProductList.Columns.Add("Quantity", "Qty");
+            gridViewProductList.Columns.Add("Price", "Unit Price");
+            gridViewProductList.Columns.Add("TotalPrice", "Total Price");
 
+            con.Open();
+            string query = "SELECT ProductCode, ProductName, ExpDate, Quantity, Price, TotalPrice FROM tb_product";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataReader reader = cmd.ExecuteReader();
 
-
-            gridViewProductList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            gridViewProductList.AllowUserToAddRows = false;
-
-            gridViewProductList.Rows.Add("P001", "C2 na green", "2024-01-01", "2026-05-05", 1, 100.00);
-            gridViewProductList.Rows.Add("P002", "C2 na re", "2024-01-01", "2026-05-05", 20, 100.00);
-            gridViewProductList.Rows.Add("D001", "Coke", "2025-01-01", "2028-05-05", 40, 100.00);
-
+            while (reader.Read())
+            {
+                gridViewProductList.Rows.Add(
+                    reader["ProductCode"].ToString(),
+                    reader["ProductName"].ToString(),
+                    Convert.ToDateTime(reader["ExpDate"]).ToString("yyyy-MM-dd"),
+                    reader["Quantity"].ToString(),
+                    reader["Price"].ToString(),
+                    reader["TotalPrice"].ToString()
+                );
+            }
         }
+
 
         private void AddProductBtn_Click(object sender, EventArgs e)
         {

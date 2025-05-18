@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new AntdUI.Panel();
+            this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.siticoneLabel2 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.yearComboBox = new AntdUI.Select();
+            this.monthComboBox = new AntdUI.Select();
+            this.dayComboBox = new AntdUI.Select();
             this.panel2 = new AntdUI.Panel();
             this.uploadDragger1 = new AntdUI.UploadDragger();
             this.txtTotalPrice = new AntdUI.InputNumber();
@@ -40,12 +45,10 @@
             this.titlebar = new AntdUI.PageHeader();
             this.siticoneControlBox3 = new Siticone.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.UI.WinForms.SiticoneControlBox();
-            this.select1 = new AntdUI.Select();
-            this.select2 = new AntdUI.Select();
-            this.select3 = new AntdUI.Select();
-            this.select4 = new AntdUI.Select();
-            this.select5 = new AntdUI.Select();
-            this.select6 = new AntdUI.Select();
+            this.siticoneLabel3 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.siticoneLabel4 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.siticoneLabel5 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.siticoneLabel6 = new Siticone.UI.WinForms.SiticoneLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.titlebar.SuspendLayout();
@@ -53,12 +56,15 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.select4);
-            this.panel1.Controls.Add(this.select5);
-            this.panel1.Controls.Add(this.select6);
-            this.panel1.Controls.Add(this.select3);
-            this.panel1.Controls.Add(this.select2);
-            this.panel1.Controls.Add(this.select1);
+            this.panel1.Controls.Add(this.siticoneLabel6);
+            this.panel1.Controls.Add(this.siticoneLabel5);
+            this.panel1.Controls.Add(this.siticoneLabel4);
+            this.panel1.Controls.Add(this.siticoneLabel3);
+            this.panel1.Controls.Add(this.siticoneLabel1);
+            this.panel1.Controls.Add(this.siticoneLabel2);
+            this.panel1.Controls.Add(this.yearComboBox);
+            this.panel1.Controls.Add(this.monthComboBox);
+            this.panel1.Controls.Add(this.dayComboBox);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txtTotalPrice);
             this.panel1.Controls.Add(this.txtPrice);
@@ -70,16 +76,63 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(10, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(855, 661);
+            this.panel1.Size = new System.Drawing.Size(855, 674);
             this.panel1.TabIndex = 0;
             this.panel1.Text = "panel1";
+            // 
+            // siticoneLabel1
+            // 
+            this.siticoneLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel1.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel1.Location = new System.Drawing.Point(74, 501);
+            this.siticoneLabel1.Name = "siticoneLabel1";
+            this.siticoneLabel1.Size = new System.Drawing.Size(77, 22);
+            this.siticoneLabel1.TabIndex = 25;
+            this.siticoneLabel1.Text = "Total Price";
+            // 
+            // siticoneLabel2
+            // 
+            this.siticoneLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel2.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel2.Location = new System.Drawing.Point(74, 236);
+            this.siticoneLabel2.Name = "siticoneLabel2";
+            this.siticoneLabel2.Size = new System.Drawing.Size(107, 22);
+            this.siticoneLabel2.TabIndex = 24;
+            this.siticoneLabel2.Text = "Expiration Date";
+            // 
+            // yearComboBox
+            // 
+            this.yearComboBox.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.yearComboBox.Location = new System.Drawing.Point(302, 265);
+            this.yearComboBox.Name = "yearComboBox";
+            this.yearComboBox.PlaceholderText = "Year";
+            this.yearComboBox.Size = new System.Drawing.Size(127, 55);
+            this.yearComboBox.TabIndex = 22;
+            // 
+            // monthComboBox
+            // 
+            this.monthComboBox.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.monthComboBox.Location = new System.Drawing.Point(178, 265);
+            this.monthComboBox.Name = "monthComboBox";
+            this.monthComboBox.PlaceholderText = "Month";
+            this.monthComboBox.Size = new System.Drawing.Size(127, 55);
+            this.monthComboBox.TabIndex = 21;
+            // 
+            // dayComboBox
+            // 
+            this.dayComboBox.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.dayComboBox.Location = new System.Drawing.Point(54, 265);
+            this.dayComboBox.Name = "dayComboBox";
+            this.dayComboBox.PlaceholderText = "Day";
+            this.dayComboBox.Size = new System.Drawing.Size(127, 55);
+            this.dayComboBox.TabIndex = 20;
             // 
             // panel2
             // 
             this.panel2.Back = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.uploadDragger1);
-            this.panel2.Location = new System.Drawing.Point(491, 75);
+            this.panel2.Location = new System.Drawing.Point(498, 286);
             this.panel2.Name = "panel2";
             this.panel2.Radius = 8;
             this.panel2.Size = new System.Drawing.Size(312, 283);
@@ -104,33 +157,31 @@
             // 
             this.txtTotalPrice.DecimalPlaces = 2;
             this.txtTotalPrice.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.txtTotalPrice.Hexadecimal = true;
             this.txtTotalPrice.Increment = new decimal(new int[] {
             0,
             0,
             0,
             0});
-            this.txtTotalPrice.Location = new System.Drawing.Point(59, 502);
+            this.txtTotalPrice.Location = new System.Drawing.Point(57, 529);
             this.txtTotalPrice.Name = "txtTotalPrice";
             this.txtTotalPrice.PlaceholderText = "Total Price";
             this.txtTotalPrice.ReadOnly = true;
             this.txtTotalPrice.Size = new System.Drawing.Size(375, 55);
             this.txtTotalPrice.SuffixText = "";
             this.txtTotalPrice.TabIndex = 15;
-            this.txtTotalPrice.Text = "0";
+            this.txtTotalPrice.Text = "0.00";
             this.txtTotalPrice.ThousandsSeparator = true;
             // 
             // txtPrice
             // 
             this.txtPrice.DecimalPlaces = 2;
             this.txtPrice.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.txtPrice.Location = new System.Drawing.Point(57, 441);
+            this.txtPrice.Location = new System.Drawing.Point(57, 439);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PlaceholderText = "Price";
             this.txtPrice.Size = new System.Drawing.Size(375, 55);
             this.txtPrice.SuffixText = "";
             this.txtPrice.TabIndex = 14;
-            this.txtPrice.Text = "1.00";
             this.txtPrice.ThousandsSeparator = true;
             this.txtPrice.Value = new decimal(new int[] {
             1,
@@ -143,16 +194,16 @@
             // 
             this.button1.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             this.button1.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.button1.Location = new System.Drawing.Point(166, 583);
+            this.button1.Location = new System.Drawing.Point(166, 604);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 42);
             this.button1.TabIndex = 13;
-            this.button1.Text = "Submit";
+            this.button1.Text = "Add";
             // 
             // txtQuantity
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.txtQuantity.Location = new System.Drawing.Point(57, 380);
+            this.txtQuantity.Location = new System.Drawing.Point(54, 352);
             this.txtQuantity.Minimum = new decimal(new int[] {
             1,
             0,
@@ -163,7 +214,6 @@
             this.txtQuantity.Size = new System.Drawing.Size(375, 55);
             this.txtQuantity.SuffixText = "";
             this.txtQuantity.TabIndex = 11;
-            this.txtQuantity.Text = "1";
             this.txtQuantity.ThousandsSeparator = true;
             this.txtQuantity.Value = new decimal(new int[] {
             1,
@@ -175,19 +225,19 @@
             // txtProductName
             // 
             this.txtProductName.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductName.Location = new System.Drawing.Point(57, 136);
+            this.txtProductName.Location = new System.Drawing.Point(57, 172);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.PlaceholderText = "Product Name";
-            this.txtProductName.Size = new System.Drawing.Size(375, 55);
+            this.txtProductName.PlaceholderText = "\"Coke\"";
+            this.txtProductName.Size = new System.Drawing.Size(753, 55);
             this.txtProductName.TabIndex = 7;
             // 
             // input1
             // 
             this.input1.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.input1.Location = new System.Drawing.Point(57, 75);
+            this.input1.Location = new System.Drawing.Point(57, 87);
             this.input1.Name = "input1";
-            this.input1.PlaceholderText = "Product Code";
-            this.input1.Size = new System.Drawing.Size(375, 55);
+            this.input1.PlaceholderText = "\"0388212P\"";
+            this.input1.Size = new System.Drawing.Size(753, 55);
             this.input1.TabIndex = 6;
             // 
             // titlebar
@@ -232,59 +282,45 @@
             this.siticoneControlBox1.Size = new System.Drawing.Size(45, 29);
             this.siticoneControlBox1.TabIndex = 6;
             // 
-            // select1
+            // siticoneLabel3
             // 
-            this.select1.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.select1.Location = new System.Drawing.Point(57, 258);
-            this.select1.Name = "select1";
-            this.select1.PlaceholderText = "Day";
-            this.select1.Size = new System.Drawing.Size(127, 55);
-            this.select1.TabIndex = 17;
+            this.siticoneLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel3.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel3.Location = new System.Drawing.Point(74, 411);
+            this.siticoneLabel3.Name = "siticoneLabel3";
+            this.siticoneLabel3.Size = new System.Drawing.Size(38, 22);
+            this.siticoneLabel3.TabIndex = 26;
+            this.siticoneLabel3.Text = "Price";
             // 
-            // select2
+            // siticoneLabel4
             // 
-            this.select2.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.select2.Location = new System.Drawing.Point(181, 258);
-            this.select2.Name = "select2";
-            this.select2.PlaceholderText = "Month";
-            this.select2.Size = new System.Drawing.Size(127, 55);
-            this.select2.TabIndex = 18;
+            this.siticoneLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel4.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel4.Location = new System.Drawing.Point(74, 324);
+            this.siticoneLabel4.Name = "siticoneLabel4";
+            this.siticoneLabel4.Size = new System.Drawing.Size(32, 22);
+            this.siticoneLabel4.TabIndex = 27;
+            this.siticoneLabel4.Text = "Qty.";
             // 
-            // select3
+            // siticoneLabel5
             // 
-            this.select3.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.select3.Location = new System.Drawing.Point(305, 258);
-            this.select3.Name = "select3";
-            this.select3.PlaceholderText = "Year";
-            this.select3.Size = new System.Drawing.Size(127, 55);
-            this.select3.TabIndex = 19;
+            this.siticoneLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel5.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel5.Location = new System.Drawing.Point(74, 148);
+            this.siticoneLabel5.Name = "siticoneLabel5";
+            this.siticoneLabel5.Size = new System.Drawing.Size(77, 22);
+            this.siticoneLabel5.TabIndex = 28;
+            this.siticoneLabel5.Text = "Item Name";
             // 
-            // select4
+            // siticoneLabel6
             // 
-            this.select4.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.select4.Location = new System.Drawing.Point(305, 319);
-            this.select4.Name = "select4";
-            this.select4.PlaceholderText = "Year";
-            this.select4.Size = new System.Drawing.Size(127, 55);
-            this.select4.TabIndex = 22;
-            // 
-            // select5
-            // 
-            this.select5.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.select5.Location = new System.Drawing.Point(181, 319);
-            this.select5.Name = "select5";
-            this.select5.PlaceholderText = "Month";
-            this.select5.Size = new System.Drawing.Size(127, 55);
-            this.select5.TabIndex = 21;
-            // 
-            // select6
-            // 
-            this.select6.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.select6.Location = new System.Drawing.Point(57, 319);
-            this.select6.Name = "select6";
-            this.select6.PlaceholderText = "Day";
-            this.select6.Size = new System.Drawing.Size(127, 55);
-            this.select6.TabIndex = 20;
+            this.siticoneLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel6.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.siticoneLabel6.Location = new System.Drawing.Point(74, 59);
+            this.siticoneLabel6.Name = "siticoneLabel6";
+            this.siticoneLabel6.Size = new System.Drawing.Size(75, 22);
+            this.siticoneLabel6.TabIndex = 29;
+            this.siticoneLabel6.Text = "Item Code";
             // 
             // AddProductForm
             // 
@@ -292,7 +328,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(875, 674);
+            this.ClientSize = new System.Drawing.Size(875, 687);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddProductForm";
@@ -300,6 +336,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddProductForm";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.titlebar.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -320,11 +357,14 @@
         private AntdUI.InputNumber txtTotalPrice;
         private AntdUI.Panel panel2;
         private AntdUI.UploadDragger uploadDragger1;
-        private AntdUI.Select select1;
-        private AntdUI.Select select4;
-        private AntdUI.Select select5;
-        private AntdUI.Select select6;
-        private AntdUI.Select select3;
-        private AntdUI.Select select2;
+        private AntdUI.Select yearComboBox;
+        private AntdUI.Select monthComboBox;
+        private AntdUI.Select dayComboBox;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel2;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel1;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel3;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel6;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel5;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel4;
     }
 }
