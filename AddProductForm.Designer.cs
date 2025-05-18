@@ -43,7 +43,6 @@
             this.txtProductName = new AntdUI.Input();
             this.input1 = new AntdUI.Input();
             this.titlebar = new AntdUI.PageHeader();
-            this.siticoneControlBox3 = new Siticone.UI.WinForms.SiticoneControlBox();
             this.siticoneControlBox1 = new Siticone.UI.WinForms.SiticoneControlBox();
             this.siticoneLabel3 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel4 = new Siticone.UI.WinForms.SiticoneLabel();
@@ -147,7 +146,7 @@
             this.uploadDragger1.BackColor = System.Drawing.Color.Transparent;
             this.uploadDragger1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
             this.uploadDragger1.Font = new System.Drawing.Font("Satoshi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadDragger1.IconRatio = 2F;
+            this.uploadDragger1.IconRatio = 1.8F;
             this.uploadDragger1.Location = new System.Drawing.Point(3, 235);
             this.uploadDragger1.Multiselect = false;
             this.uploadDragger1.Name = "uploadDragger1";
@@ -203,7 +202,7 @@
             this.button1.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             this.button1.Font = new System.Drawing.Font("Satoshi", 12F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(166, 604);
+            this.button1.Location = new System.Drawing.Point(178, 602);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 42);
             this.button1.TabIndex = 13;
@@ -252,7 +251,6 @@
             // titlebar
             // 
             this.titlebar.CloseSize = 30;
-            this.titlebar.Controls.Add(this.siticoneControlBox3);
             this.titlebar.Controls.Add(this.siticoneControlBox1);
             this.titlebar.Dock = System.Windows.Forms.DockStyle.Top;
             this.titlebar.Font = new System.Drawing.Font("Satoshi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,19 +262,6 @@
             this.titlebar.SubText = "";
             this.titlebar.TabIndex = 5;
             this.titlebar.Text = "Add Product";
-            // 
-            // siticoneControlBox3
-            // 
-            this.siticoneControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.siticoneControlBox3.ControlBoxType = Siticone.UI.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.siticoneControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(240)))), ((int)(((byte)(244)))));
-            this.siticoneControlBox3.HoveredState.Parent = this.siticoneControlBox3;
-            this.siticoneControlBox3.IconColor = System.Drawing.Color.Black;
-            this.siticoneControlBox3.Location = new System.Drawing.Point(703, -1);
-            this.siticoneControlBox3.Name = "siticoneControlBox3";
-            this.siticoneControlBox3.ShadowDecoration.Parent = this.siticoneControlBox3;
-            this.siticoneControlBox3.Size = new System.Drawing.Size(45, 29);
-            this.siticoneControlBox3.TabIndex = 8;
             // 
             // siticoneControlBox1
             // 
@@ -367,7 +352,6 @@
 
         private AntdUI.Panel panel1;
         private AntdUI.PageHeader titlebar;
-        private Siticone.UI.WinForms.SiticoneControlBox siticoneControlBox3;
         private Siticone.UI.WinForms.SiticoneControlBox siticoneControlBox1;
         private AntdUI.Input txtProductName;
         private AntdUI.Input input1;
