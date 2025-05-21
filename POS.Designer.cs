@@ -44,7 +44,7 @@
             this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel2 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel3 = new Siticone.UI.WinForms.SiticoneLabel();
-            this.panel5 = new AntdUI.Panel();
+            this.productPanel = new AntdUI.Panel();
             this.input5 = new AntdUI.Input();
             this.input6 = new AntdUI.Input();
             this.siticoneLabel4 = new Siticone.UI.WinForms.SiticoneLabel();
@@ -56,6 +56,8 @@
             this.siticoneLabel6 = new Siticone.UI.WinForms.SiticoneLabel();
             this.mopComboBox = new AntdUI.Select();
             this.siticoneControlBox2 = new Siticone.UI.WinForms.SiticoneControlBox();
+            this.input4 = new AntdUI.Input();
+            this.button3 = new AntdUI.Button();
             this.titlebar.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -99,7 +101,7 @@
             // siticonePanel1
             // 
             this.siticonePanel1.Controls.Add(this.panel1);
-            this.siticonePanel1.Controls.Add(this.panel5);
+            this.siticonePanel1.Controls.Add(this.productPanel);
             this.siticonePanel1.Controls.Add(this.panel4);
             this.siticonePanel1.Controls.Add(this.panel3);
             this.siticonePanel1.Controls.Add(this.panel2);
@@ -111,10 +113,10 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.input4);
             this.panel2.Controls.Add(this.mopComboBox);
             this.panel2.Controls.Add(this.siticoneLabel6);
             this.panel2.Controls.Add(this.siticoneLabel4);
-            this.panel2.Controls.Add(this.input6);
             this.panel2.Controls.Add(this.siticoneLabel5);
             this.panel2.Controls.Add(this.input5);
             this.panel2.Location = new System.Drawing.Point(488, 530);
@@ -152,7 +154,7 @@
             this.input1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.input1.Location = new System.Drawing.Point(115, 14);
             this.input1.Name = "input1";
-            this.input1.Size = new System.Drawing.Size(260, 47);
+            this.input1.Size = new System.Drawing.Size(320, 47);
             this.input1.TabIndex = 0;
             this.input1.Text = "input1";
             // 
@@ -161,7 +163,7 @@
             this.input2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.input2.Location = new System.Drawing.Point(115, 69);
             this.input2.Name = "input2";
-            this.input2.Size = new System.Drawing.Size(260, 47);
+            this.input2.Size = new System.Drawing.Size(320, 47);
             this.input2.TabIndex = 1;
             this.input2.Text = "input2";
             // 
@@ -170,7 +172,7 @@
             this.input3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.input3.Location = new System.Drawing.Point(115, 122);
             this.input3.Name = "input3";
-            this.input3.Size = new System.Drawing.Size(260, 47);
+            this.input3.Size = new System.Drawing.Size(320, 47);
             this.input3.TabIndex = 2;
             this.input3.Text = "input3";
             // 
@@ -204,18 +206,18 @@
             this.siticoneLabel3.TabIndex = 5;
             this.siticoneLabel3.Text = "TOTAL";
             // 
-            // panel5
+            // productPanel
             // 
-            this.panel5.Location = new System.Drawing.Point(22, 20);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(704, 501);
-            this.panel5.TabIndex = 1;
-            this.panel5.Text = "panel5";
+            this.productPanel.Location = new System.Drawing.Point(22, 20);
+            this.productPanel.Name = "productPanel";
+            this.productPanel.Size = new System.Drawing.Size(704, 501);
+            this.productPanel.TabIndex = 1;
+            this.productPanel.Text = "panel5";
             // 
             // input5
             // 
             this.input5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.input5.Location = new System.Drawing.Point(115, 67);
+            this.input5.Location = new System.Drawing.Point(115, 122);
             this.input5.Name = "input5";
             this.input5.Size = new System.Drawing.Size(260, 47);
             this.input5.TabIndex = 7;
@@ -224,11 +226,12 @@
             // input6
             // 
             this.input6.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.input6.Location = new System.Drawing.Point(115, 120);
+            this.input6.JoinLeft = true;
+            this.input6.Location = new System.Drawing.Point(65, 8);
             this.input6.Name = "input6";
-            this.input6.Size = new System.Drawing.Size(260, 47);
+            this.input6.PlaceholderText = "Search";
+            this.input6.Size = new System.Drawing.Size(324, 47);
             this.input6.TabIndex = 8;
-            this.input6.Text = "input6";
             // 
             // siticoneLabel4
             // 
@@ -274,7 +277,9 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.gridViewProductList);
+            this.panel1.Controls.Add(this.input6);
             this.panel1.Location = new System.Drawing.Point(736, 20);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(402, 501);
@@ -314,14 +319,14 @@
             this.gridViewProductList.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridViewProductList.EnableHeadersVisualStyles = false;
             this.gridViewProductList.GridColor = System.Drawing.Color.White;
-            this.gridViewProductList.Location = new System.Drawing.Point(14, 14);
+            this.gridViewProductList.Location = new System.Drawing.Point(14, 61);
             this.gridViewProductList.Name = "gridViewProductList";
             this.gridViewProductList.ReadOnly = true;
             this.gridViewProductList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.gridViewProductList.RowHeadersVisible = false;
             this.gridViewProductList.RowTemplate.Height = 40;
             this.gridViewProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridViewProductList.Size = new System.Drawing.Size(375, 473);
+            this.gridViewProductList.Size = new System.Drawing.Size(375, 426);
             this.gridViewProductList.TabIndex = 4;
             this.gridViewProductList.Theme = Siticone.UI.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.gridViewProductList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -359,7 +364,7 @@
             // mopComboBox
             // 
             this.mopComboBox.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.mopComboBox.Location = new System.Drawing.Point(228, 15);
+            this.mopComboBox.Location = new System.Drawing.Point(228, 14);
             this.mopComboBox.Name = "mopComboBox";
             this.mopComboBox.PlaceholderText = "";
             this.mopComboBox.Size = new System.Drawing.Size(147, 47);
@@ -377,6 +382,27 @@
             this.siticoneControlBox2.ShadowDecoration.Parent = this.siticoneControlBox2;
             this.siticoneControlBox2.Size = new System.Drawing.Size(49, 29);
             this.siticoneControlBox2.TabIndex = 3;
+            // 
+            // input4
+            // 
+            this.input4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.input4.Location = new System.Drawing.Point(115, 69);
+            this.input4.Name = "input4";
+            this.input4.Size = new System.Drawing.Size(260, 47);
+            this.input4.TabIndex = 9;
+            this.input4.Text = "input4";
+            // 
+            // button3
+            // 
+            this.button3.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(165)))), ((int)(((byte)(165)))));
+            this.button3.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button3.Icon = ((System.Drawing.Image)(resources.GetObject("button3.Icon")));
+            this.button3.JoinRight = true;
+            this.button3.Location = new System.Drawing.Point(14, 8);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(51, 47);
+            this.button3.TabIndex = 1;
             // 
             // POS
             // 
@@ -418,7 +444,7 @@
         private AntdUI.Input input3;
         private AntdUI.Input input2;
         private AntdUI.Input input1;
-        private AntdUI.Panel panel5;
+        private AntdUI.Panel productPanel;
         private AntdUI.Button button1;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel4;
         private AntdUI.Input input6;
@@ -430,5 +456,7 @@
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel6;
         private Siticone.UI.WinForms.SiticoneControlBox siticoneControlBox2;
         private AntdUI.Select mopComboBox;
+        private AntdUI.Button button3;
+        private AntdUI.Input input4;
     }
 }
