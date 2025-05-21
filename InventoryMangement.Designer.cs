@@ -46,6 +46,7 @@
             this.SalesBtn = new Siticone.UI.WinForms.SiticoneRoundedButton();
             this.loadingTimer = new System.Windows.Forms.Timer(this.components);
             this.dropDownTimer = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new AntdUI.Button();
             this.titlebar.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             this.menuPanel.SuspendLayout();
@@ -124,6 +125,7 @@
             // 
             // menuPanel
             // 
+            this.menuPanel.Controls.Add(this.button1);
             this.menuPanel.Controls.Add(this.siticonePictureBox1);
             this.menuPanel.Controls.Add(this.panelDropDown);
             this.menuPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -327,6 +329,15 @@
             this.dropDownTimer.Interval = 1;
             this.dropDownTimer.Tick += new System.EventHandler(this.dropDownTimer_Tick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(63, 591);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 39);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Temp POS";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // InventoryMangement
             // 
             this.ClientSize = new System.Drawing.Size(1160, 720);
@@ -367,5 +378,6 @@
         private Siticone.UI.WinForms.SiticoneRoundedButton SalesBtn;
         private System.Windows.Forms.Timer loadingTimer;
         private System.Windows.Forms.Timer dropDownTimer;
+        private AntdUI.Button button1;
     }
 }

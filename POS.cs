@@ -11,7 +11,17 @@ namespace AntdUIDemo
     {
         public POS()
         {
-            InitializeComponent();      
+            InitializeComponent();
+            InitializeDataGridView();
+        }
+
+        public void InitializeDataGridView()
+        {
+            
+            gridViewProductList.Columns.Add("ProductName", "   Item Name");
+            gridViewProductList.Columns.Add("Quantity", "Qty");
+            gridViewProductList.Columns.Add("Price", "Amount");
+            // Load data into the DataGridView here
         }
     }
 }

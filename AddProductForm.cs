@@ -12,6 +12,7 @@ namespace CSCISystem1._1
 {
     public partial class AddProductForm: Form
     {
+
         public AddProductForm()
         {
             InitializeComponent();
@@ -21,8 +22,9 @@ namespace CSCISystem1._1
             LoadMonth();
             LoadYear();
             
-        }        
-
+        }
+        
+       
         private void RadiusForm()
         {
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
@@ -75,7 +77,7 @@ namespace CSCISystem1._1
             for (int i = 1; i <= 31; i++)
             {
                 dayComboBox.Items.Add(i);
-            }
+            }            
         }
         private void LoadMonth()
         {
@@ -93,7 +95,7 @@ namespace CSCISystem1._1
             // looping from 2025 to 1900
             
             yearComboBox.SelectedIndex = 0;
-            for (int i = 2045; i >= 2025; i--)
+            for (int i = 2025; i <= 2045; i++)
             {
                 yearComboBox.Items.Add(i);
             }

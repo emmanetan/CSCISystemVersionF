@@ -216,21 +216,20 @@
             0,
             0,
             0});
-            this.txtTotalPrice.Location = new System.Drawing.Point(57, 529);
+            this.txtTotalPrice.Location = new System.Drawing.Point(54, 529);
             this.txtTotalPrice.Name = "txtTotalPrice";
             this.txtTotalPrice.PlaceholderText = "Total Price";
             this.txtTotalPrice.ReadOnly = true;
-            this.txtTotalPrice.Size = new System.Drawing.Size(375, 55);
+            this.txtTotalPrice.Size = new System.Drawing.Size(378, 55);
             this.txtTotalPrice.SuffixText = "";
             this.txtTotalPrice.TabIndex = 15;
-            this.txtTotalPrice.Text = "0.00";
             this.txtTotalPrice.ThousandsSeparator = true;
             // 
             // txtPrice
             // 
             this.txtPrice.DecimalPlaces = 2;
             this.txtPrice.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.txtPrice.Location = new System.Drawing.Point(57, 439);
+            this.txtPrice.Location = new System.Drawing.Point(54, 439);
             this.txtPrice.Minimum = new decimal(new int[] {
             0,
             0,
@@ -238,10 +237,9 @@
             0});
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PlaceholderText = "Price";
-            this.txtPrice.Size = new System.Drawing.Size(375, 55);
+            this.txtPrice.Size = new System.Drawing.Size(378, 55);
             this.txtPrice.SuffixText = "";
             this.txtPrice.TabIndex = 14;
-            this.txtPrice.Text = "1.00";
             this.txtPrice.ThousandsSeparator = true;
             this.txtPrice.Value = new decimal(new int[] {
             1,
@@ -275,7 +273,6 @@
             this.txtQuantity.Size = new System.Drawing.Size(375, 55);
             this.txtQuantity.SuffixText = "";
             this.txtQuantity.TabIndex = 11;
-            this.txtQuantity.Text = "1";
             this.txtQuantity.ThousandsSeparator = true;
             this.txtQuantity.Value = new decimal(new int[] {
             1,
@@ -287,10 +284,10 @@
             // txtProductName
             // 
             this.txtProductName.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductName.Location = new System.Drawing.Point(57, 172);
+            this.txtProductName.Location = new System.Drawing.Point(56, 172);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.PlaceholderText = "\"Coke\"";
-            this.txtProductName.Size = new System.Drawing.Size(668, 55);
+            this.txtProductName.Size = new System.Drawing.Size(672, 55);
             this.txtProductName.TabIndex = 7;
             // 
             // input1

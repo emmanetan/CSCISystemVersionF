@@ -93,5 +93,12 @@ namespace AntdUIDemo
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            POS pOS = new POS();
+            pOS.Show();
+
+        }
     }
 }
