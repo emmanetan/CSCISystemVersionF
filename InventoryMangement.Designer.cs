@@ -69,7 +69,7 @@
             this.titlebar.ShowIcon = true;
             this.titlebar.Size = new System.Drawing.Size(1160, 29);
             this.titlebar.SubGap = 5;
-            this.titlebar.SubText = "";
+            this.titlebar.SubText = "Inventory Management";
             this.titlebar.TabIndex = 1;
             this.titlebar.Text = "WiseMart";
             // 
