@@ -39,7 +39,7 @@
             this.monthComboBox = new AntdUI.Select();
             this.dayComboBox = new AntdUI.Select();
             this.panel2 = new AntdUI.Panel();
-            this.siticonePictureBox1 = new Siticone.UI.WinForms.SiticonePictureBox();
+            this.pictureBox = new Siticone.UI.WinForms.SiticonePictureBox();
             this.uploadDragger1 = new AntdUI.UploadDragger();
             this.txtTotalPrice = new AntdUI.InputNumber();
             this.txtPrice = new AntdUI.InputNumber();
@@ -52,7 +52,7 @@
             this.resetBtn = new AntdUI.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.titlebar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,7 +174,7 @@
             // 
             this.panel2.Back = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.siticonePictureBox1);
+            this.panel2.Controls.Add(this.pictureBox);
             this.panel2.Controls.Add(this.uploadDragger1);
             this.panel2.Location = new System.Drawing.Point(498, 265);
             this.panel2.Name = "panel2";
@@ -183,15 +183,15 @@
             this.panel2.TabIndex = 16;
             this.panel2.Text = "panel2";
             // 
-            // siticonePictureBox1
+            // pictureBox
             // 
-            this.siticonePictureBox1.Location = new System.Drawing.Point(3, 5);
-            this.siticonePictureBox1.Name = "siticonePictureBox1";
-            this.siticonePictureBox1.ShadowDecoration.Parent = this.siticonePictureBox1;
-            this.siticonePictureBox1.Size = new System.Drawing.Size(224, 224);
-            this.siticonePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.siticonePictureBox1.TabIndex = 18;
-            this.siticonePictureBox1.TabStop = false;
+            this.pictureBox.Location = new System.Drawing.Point(3, 5);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.ShadowDecoration.Parent = this.pictureBox;
+            this.pictureBox.Size = new System.Drawing.Size(224, 224);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 18;
+            this.pictureBox.TabStop = false;
             // 
             // uploadDragger1
             // 
@@ -356,7 +356,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.titlebar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -384,7 +384,7 @@
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel6;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel5;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel4;
-        private Siticone.UI.WinForms.SiticonePictureBox siticonePictureBox1;
+        private Siticone.UI.WinForms.SiticonePictureBox pictureBox;
         private AntdUI.Button resetBtn;
     }
 }

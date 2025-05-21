@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Siticone.UI.WinForms.Suite;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -116,7 +117,9 @@ namespace CSCISystem1._1
             dayComboBox.SelectedIndex = -1;
             monthComboBox.SelectedIndex = -1;
             yearComboBox.SelectedIndex = -1;
+            
             txtProductCode.Focus();
+
         }
     }
 }
