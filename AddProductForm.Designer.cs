@@ -46,7 +46,7 @@
             this.addBtn = new AntdUI.Button();
             this.txtQuantity = new AntdUI.InputNumber();
             this.txtProductName = new AntdUI.Input();
-            this.input1 = new AntdUI.Input();
+            this.txtProductCode = new AntdUI.Input();
             this.titlebar = new AntdUI.PageHeader();
             this.siticoneControlBox1 = new Siticone.UI.WinForms.SiticoneControlBox();
             this.resetBtn = new AntdUI.Button();
@@ -74,7 +74,7 @@
             this.panel1.Controls.Add(this.addBtn);
             this.panel1.Controls.Add(this.txtQuantity);
             this.panel1.Controls.Add(this.txtProductName);
-            this.panel1.Controls.Add(this.input1);
+            this.panel1.Controls.Add(this.txtProductCode);
             this.panel1.Controls.Add(this.titlebar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(10, 3);
@@ -258,6 +258,7 @@
             this.addBtn.Size = new System.Drawing.Size(132, 42);
             this.addBtn.TabIndex = 13;
             this.addBtn.Text = "Add";
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // txtQuantity
             // 
@@ -290,14 +291,14 @@
             this.txtProductName.Size = new System.Drawing.Size(672, 55);
             this.txtProductName.TabIndex = 7;
             // 
-            // input1
+            // txtProductCode
             // 
-            this.input1.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.input1.Location = new System.Drawing.Point(57, 87);
-            this.input1.Name = "input1";
-            this.input1.PlaceholderText = "\"0001700D\"";
-            this.input1.Size = new System.Drawing.Size(671, 55);
-            this.input1.TabIndex = 6;
+            this.txtProductCode.Font = new System.Drawing.Font("Satoshi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProductCode.Location = new System.Drawing.Point(57, 87);
+            this.txtProductCode.Name = "txtProductCode";
+            this.txtProductCode.PlaceholderText = "\"0001700D\"";
+            this.txtProductCode.Size = new System.Drawing.Size(671, 55);
+            this.txtProductCode.TabIndex = 6;
             // 
             // titlebar
             // 
@@ -337,6 +338,7 @@
             this.resetBtn.Size = new System.Drawing.Size(132, 42);
             this.resetBtn.TabIndex = 30;
             this.resetBtn.Text = "Reset";
+            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
             // 
             // AddProductForm
             // 
@@ -366,7 +368,7 @@
         private AntdUI.PageHeader titlebar;
         private Siticone.UI.WinForms.SiticoneControlBox siticoneControlBox1;
         private AntdUI.Input txtProductName;
-        private AntdUI.Input input1;
+        private AntdUI.Input txtProductCode;
         private AntdUI.InputNumber txtQuantity;
         private AntdUI.Button addBtn;
         private AntdUI.InputNumber txtPrice;

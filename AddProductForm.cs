@@ -100,5 +100,23 @@ namespace CSCISystem1._1
                 yearComboBox.Items.Add(i);
             }
         }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resetBtn_Click(object sender, EventArgs e)
+        {
+            txtPrice.Clear();
+            txtProductCode.Clear();
+            txtProductName.Clear();
+            txtQuantity.Clear();
+            txtTotalPrice.Clear();
+            dayComboBox.SelectedIndex = -1;
+            monthComboBox.SelectedIndex = -1;
+            yearComboBox.SelectedIndex = -1;
+            txtProductCode.Focus();
+        }
     }
 }
