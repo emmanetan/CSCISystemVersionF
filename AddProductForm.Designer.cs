@@ -255,7 +255,7 @@
             this.button1.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
             this.button1.Font = new System.Drawing.Font("Satoshi", 12F);
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(118, 602);
+            this.button1.Location = new System.Drawing.Point(114, 602);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 42);
             this.button1.TabIndex = 13;
@@ -335,7 +335,7 @@
             this.button2.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
             this.button2.Font = new System.Drawing.Font("Satoshi", 12F);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.Location = new System.Drawing.Point(256, 602);
+            this.button2.Location = new System.Drawing.Point(252, 602);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 42);
             this.button2.TabIndex = 30;
