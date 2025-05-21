@@ -1,4 +1,6 @@
-﻿using Siticone.UI.WinForms.Suite;
+﻿using AntdUIDemo;
+using Microsoft.Data.SqlClient;
+using Siticone.UI.WinForms.Suite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,8 @@ namespace CSCISystem1._1
 {
     public partial class AddProductForm: Form
     {
+        SqlConnection con = new SqlConnection("Data Source = EMMAN\\SQLEXPRESS; Initial Catalog = DB_System; Integrated Security = True; Encrypt=True;Trust Server Certificate=True");
+        SqlCommand cmd = new SqlCommand();
 
         public AddProductForm()
         {
@@ -22,7 +26,22 @@ namespace CSCISystem1._1
             LoadDay();
             LoadMonth();
             LoadYear();
+            ClearField();
             
+        }
+
+        private void ClearField()
+        {
+            txtPrice.Clear();
+            txtProductCode.Clear();
+            txtProductName.Clear();
+            txtQuantity.Clear();
+            txtTotalPrice.Clear();
+            dayComboBox.SelectedIndex = -1;
+            monthComboBox.SelectedIndex = -1;
+            yearComboBox.SelectedIndex = -1;
+
+            txtProductCode.Focus();
         }
         
        
@@ -104,22 +123,47 @@ namespace CSCISystem1._1
 
         private void addBtn_Click(object sender, EventArgs e)
         {
+            string productCode = txtProductCode.Text.Trim();
+            string productName = txtProductName.Text.Trim();
+            string quantityText = txtQuantity.Text.Trim();
+            string priceText = txtPrice.Text.Trim();
+            string totalPriceText = txtTotalPrice.Text.Trim();
+            if (string.IsNullOrEmpty(productCode) || string.IsNullOrEmpty(productName) ||
+                string.IsNullOrEmpty(quantityText) || string.IsNullOrEmpty(priceText) ||
+                string.IsNullOrEmpty(totalPriceText))
+            {
+                MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            // Add your logic to save the product information to the database here
+            string query = "INSERT INTO tb_product (ProductCode, ProductName, ExpDate, Quantity, Price, TotalPrice) " +
+                           "VALUES (@ProductCode, @ProductName, @ExpDate, @Quantity, @Price, @TotalPrice)";
+            cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@ProductCode", productCode);
+            cmd.Parameters.AddWithValue("@ProductName", productName);
+            cmd.Parameters.AddWithValue("@ExpDate", new DateTime(Convert.ToInt32(yearComboBox.Text), Convert.ToInt32(monthComboBox.Text), Convert.ToInt32(dayComboBox.Text)));
+            cmd.Parameters.AddWithValue("@Quantity", Convert.ToInt32(quantityText));
+            cmd.Parameters.AddWithValue("@Price", Convert.ToDecimal(priceText));
+            cmd.Parameters.AddWithValue("@TotalPrice", Convert.ToDecimal(totalPriceText));
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            // Optionally, you can clear the input fields after adding the product
+            MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ClearField();
 
+            // Refresh the DataGridView or any other UI element to show the newly added product
+            // For example, you can call the method to reload the DataGridView here
+
+
+
+            
+           
         }
 
         private void resetBtn_Click(object sender, EventArgs e)
         {
-            txtPrice.Clear();
-            txtProductCode.Clear();
-            txtProductName.Clear();
-            txtQuantity.Clear();
-            txtTotalPrice.Clear();
-            dayComboBox.SelectedIndex = -1;
-            monthComboBox.SelectedIndex = -1;
-            yearComboBox.SelectedIndex = -1;
-            
-            txtProductCode.Focus();
-
+            ClearField();
         }
     }
 }
