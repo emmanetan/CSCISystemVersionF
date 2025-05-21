@@ -49,7 +49,7 @@
             this.input1 = new AntdUI.Input();
             this.titlebar = new AntdUI.PageHeader();
             this.siticoneControlBox1 = new Siticone.UI.WinForms.SiticoneControlBox();
-            this.button2 = new AntdUI.Button();
+            this.resetBtn = new AntdUI.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).BeginInit();
@@ -58,7 +58,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.resetBtn);
             this.panel1.Controls.Add(this.siticoneLabel6);
             this.panel1.Controls.Add(this.siticoneLabel5);
             this.panel1.Controls.Add(this.siticoneLabel4);
@@ -327,16 +327,16 @@
             this.siticoneControlBox1.Size = new System.Drawing.Size(45, 29);
             this.siticoneControlBox1.TabIndex = 6;
             // 
-            // button2
+            // resetBtn
             // 
-            this.button2.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
-            this.button2.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button2.Location = new System.Drawing.Point(252, 602);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 42);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Reset";
+            this.resetBtn.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
+            this.resetBtn.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.resetBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.resetBtn.Location = new System.Drawing.Point(252, 602);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.Size = new System.Drawing.Size(132, 42);
+            this.resetBtn.TabIndex = 30;
+            this.resetBtn.Text = "Reset";
             // 
             // AddProductForm
             // 
@@ -383,6 +383,6 @@
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel5;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel4;
         private Siticone.UI.WinForms.SiticonePictureBox siticonePictureBox1;
-        private AntdUI.Button button2;
+        private AntdUI.Button resetBtn;
     }
 }
