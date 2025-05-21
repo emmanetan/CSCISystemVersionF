@@ -15,8 +15,8 @@ namespace CSCISystem1._1
 {
     public partial class AddProductForm: Form
     {
-        SqlConnection con = new SqlConnection("Data Source = EMMAN\\SQLEXPRESS; Initial Catalog = DB_System; Integrated Security = True; Encrypt=True;Trust Server Certificate=True");
-        SqlCommand cmd = new SqlCommand();
+        SqlConnection _con = new SqlConnection("Data Source = EMMAN\\SQLEXPRESS; Initial Catalog = DB_System; Integrated Security = True; Encrypt=True;Trust Server Certificate=True");
+        SqlCommand _cmd = new SqlCommand();
 
         public AddProductForm()
         {
@@ -48,7 +48,7 @@ namespace CSCISystem1._1
         private void RadiusForm()
         {
             System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath();
-            int radius = 18;
+            var radius = 18;
 
             path.AddArc(0, 0, radius, radius, 180, 90);
             path.AddArc(this.Width - radius, 0, radius, radius, 272, 90);
@@ -62,14 +62,14 @@ namespace CSCISystem1._1
 
         private void CalculateTotalPrice()
         {
-            string quantityText = txtQuantity.Text.Trim();
-            string priceText = txtPrice.Text.Trim();
+            var quantityText = txtQuantity.Text.Trim();
+            var priceText = txtPrice.Text.Trim();
 
-            if (int.TryParse(quantityText, out int quantity) &&
-                decimal.TryParse(priceText, out decimal price) &&
+            if (int.TryParse(quantityText, out var quantity) &&
+                decimal.TryParse(priceText, out var price) &&
                 quantity > 0 && price > 0)
             {
-                decimal totalPrice = quantity * price;
+                var totalPrice = quantity * price;
                 txtTotalPrice.Text = totalPrice.ToString("0.00");
             }
             else
@@ -94,7 +94,7 @@ namespace CSCISystem1._1
             dayComboBox.SelectedIndex = 0;
 
             // looping from 1 to 31
-            for (int i = 1; i <= 31; i++)
+            for (var i = 1; i <= 31; i++)
             {
                 dayComboBox.Items.Add(i);
             }            
@@ -105,7 +105,7 @@ namespace CSCISystem1._1
             monthComboBox.SelectedIndex = 0;
 
             // looping from 1 to 12
-            for (int i = 1; i <= 12; i++)
+            for (var i = 1; i <= 12; i++)
             {
                 monthComboBox.Items.Add(i);
             }
@@ -115,7 +115,7 @@ namespace CSCISystem1._1
             // looping from 2025 to 1900
             
             yearComboBox.SelectedIndex = 0;
-            for (int i = 2025; i <= 2045; i++)
+            for (var i = 2025; i <= 2045; i++)
             {
                 yearComboBox.Items.Add(i);
             }
@@ -123,11 +123,11 @@ namespace CSCISystem1._1
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            string productCode = txtProductCode.Text.Trim();
-            string productName = txtProductName.Text.Trim();
-            string quantityText = txtQuantity.Text.Trim();
-            string priceText = txtPrice.Text.Trim();
-            string totalPriceText = txtTotalPrice.Text.Trim();
+            var productCode = txtProductCode.Text.Trim();
+            var productName = txtProductName.Text.Trim();
+            var quantityText = txtQuantity.Text.Trim();
+            var priceText = txtPrice.Text.Trim();
+            var totalPriceText = txtTotalPrice.Text.Trim();
             if (string.IsNullOrEmpty(productCode) || string.IsNullOrEmpty(productName) ||
                 string.IsNullOrEmpty(quantityText) || string.IsNullOrEmpty(priceText) ||
                 string.IsNullOrEmpty(totalPriceText))
@@ -136,18 +136,18 @@ namespace CSCISystem1._1
                 return;
             }
             // Add your logic to save the product information to the database here
-            string query = "INSERT INTO tb_product (ProductCode, ProductName, ExpDate, Quantity, Price, TotalPrice) " +
+            var query = "INSERT INTO tb_product (ProductCode, ProductName, ExpDate, Quantity, Price, TotalPrice) " +
                            "VALUES (@ProductCode, @ProductName, @ExpDate, @Quantity, @Price, @TotalPrice)";
-            cmd = new SqlCommand(query, con);
-            cmd.Parameters.AddWithValue("@ProductCode", productCode);
-            cmd.Parameters.AddWithValue("@ProductName", productName);
-            cmd.Parameters.AddWithValue("@ExpDate", new DateTime(Convert.ToInt32(yearComboBox.Text), Convert.ToInt32(monthComboBox.Text), Convert.ToInt32(dayComboBox.Text)));
-            cmd.Parameters.AddWithValue("@Quantity", Convert.ToInt32(quantityText));
-            cmd.Parameters.AddWithValue("@Price", Convert.ToDecimal(priceText));
-            cmd.Parameters.AddWithValue("@TotalPrice", Convert.ToDecimal(totalPriceText));
-            con.Open();
-            cmd.ExecuteNonQuery();
-            con.Close();
+            _cmd = new SqlCommand(query, _con);
+            _cmd.Parameters.AddWithValue("@ProductCode", productCode);
+            _cmd.Parameters.AddWithValue("@ProductName", productName);
+            _cmd.Parameters.AddWithValue("@ExpDate", new DateTime(Convert.ToInt32(yearComboBox.Text), Convert.ToInt32(monthComboBox.Text), Convert.ToInt32(dayComboBox.Text)));
+            _cmd.Parameters.AddWithValue("@Quantity", Convert.ToInt32(quantityText));
+            _cmd.Parameters.AddWithValue("@Price", Convert.ToDecimal(priceText));
+            _cmd.Parameters.AddWithValue("@TotalPrice", Convert.ToDecimal(totalPriceText));
+            _con.Open();
+            _cmd.ExecuteNonQuery();
+            _con.Close();
             // Optionally, you can clear the input fields after adding the product
             MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             ClearField();
@@ -155,10 +155,13 @@ namespace CSCISystem1._1
             // Refresh the DataGridView or any other UI element to show the newly added product
             // For example, you can call the method to reload the DataGridView here
 
-
-
             
-           
+
+
+
+
+
+
         }
 
         private void resetBtn_Click(object sender, EventArgs e)

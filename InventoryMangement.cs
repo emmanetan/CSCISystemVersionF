@@ -13,8 +13,8 @@ namespace AntdUIDemo
 {
     public partial class InventoryMangement : AntdUI.Window
     {
-        SqlConnection con = new SqlConnection("Data Source = EMMAN\\SQLEXPRESS; Initial Catalog = DB_System; Integrated Security = True; Encrypt=True;Trust Server Certificate=True");
-        SqlCommand cmd;
+        SqlConnection _con = new SqlConnection("Data Source = EMMAN\\SQLEXPRESS; Initial Catalog = DB_System; Integrated Security = True; Encrypt=True;Trust Server Certificate=True");
+        SqlCommand _cmd;
 
         public InventoryMangement()
         {
