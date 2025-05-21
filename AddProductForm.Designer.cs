@@ -43,7 +43,7 @@
             this.uploadDragger1 = new AntdUI.UploadDragger();
             this.txtTotalPrice = new AntdUI.InputNumber();
             this.txtPrice = new AntdUI.InputNumber();
-            this.button1 = new AntdUI.Button();
+            this.addBtn = new AntdUI.Button();
             this.txtQuantity = new AntdUI.InputNumber();
             this.txtProductName = new AntdUI.Input();
             this.input1 = new AntdUI.Input();
@@ -71,7 +71,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txtTotalPrice);
             this.panel1.Controls.Add(this.txtPrice);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.addBtn);
             this.panel1.Controls.Add(this.txtQuantity);
             this.panel1.Controls.Add(this.txtProductName);
             this.panel1.Controls.Add(this.input1);
@@ -248,16 +248,16 @@
             0});
             this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
             // 
-            // button1
+            // addBtn
             // 
-            this.button1.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
-            this.button1.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(114, 602);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 42);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Add";
+            this.addBtn.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(151)))), ((int)(((byte)(255)))));
+            this.addBtn.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.addBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.addBtn.Location = new System.Drawing.Point(114, 602);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(132, 42);
+            this.addBtn.TabIndex = 13;
+            this.addBtn.Text = "Add";
             // 
             // txtQuantity
             // 
@@ -368,7 +368,7 @@
         private AntdUI.Input txtProductName;
         private AntdUI.Input input1;
         private AntdUI.InputNumber txtQuantity;
-        private AntdUI.Button button1;
+        private AntdUI.Button addBtn;
         private AntdUI.InputNumber txtPrice;
         private AntdUI.InputNumber txtTotalPrice;
         private AntdUI.Panel panel2;
