@@ -27,7 +27,6 @@ namespace CSCISystem1._1
             LoadMonth();
             LoadYear();
             ClearField();
-            
         }
 
         private void ClearField()
