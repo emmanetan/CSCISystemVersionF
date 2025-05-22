@@ -18,8 +18,8 @@ namespace AntdUIDemo
         public POS()
         {
             InitializeComponent();
-            
             LoadMOP();
+            
         }
 
         private void LoadMOP()
@@ -27,6 +27,11 @@ namespace AntdUIDemo
             
             mopDropdown.Items.Add("Cash");
 
+        }
+
+        private void POS_Load(object sender, EventArgs e)
+        {
+            txtSearchItem.Focus();
         }
     }
 }

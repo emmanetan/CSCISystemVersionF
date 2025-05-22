@@ -26,6 +26,11 @@ namespace CSCISystem1._1
             LoadDay();
             LoadMonth();
             LoadYear();
+            
+        }
+
+        private void AddProductForm_Load(object sender, EventArgs e)
+        {
             ClearField();
         }
 
@@ -167,5 +172,7 @@ namespace CSCISystem1._1
         {
             ClearField();
         }
+
+        
     }
 }

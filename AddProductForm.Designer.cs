@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new AntdUI.Panel();
+            this.resetBtn = new AntdUI.Button();
             this.siticoneLabel6 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel5 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel4 = new Siticone.UI.WinForms.SiticoneLabel();
@@ -49,7 +50,6 @@
             this.txtProductCode = new AntdUI.Input();
             this.titlebar = new AntdUI.PageHeader();
             this.siticoneControlBox1 = new Siticone.UI.WinForms.SiticoneControlBox();
-            this.resetBtn = new AntdUI.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -82,6 +82,18 @@
             this.panel1.Size = new System.Drawing.Size(793, 674);
             this.panel1.TabIndex = 0;
             this.panel1.Text = "panel1";
+            // 
+            // resetBtn
+            // 
+            this.resetBtn.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
+            this.resetBtn.Font = new System.Drawing.Font("Satoshi", 12F);
+            this.resetBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.resetBtn.Location = new System.Drawing.Point(252, 602);
+            this.resetBtn.Name = "resetBtn";
+            this.resetBtn.Size = new System.Drawing.Size(132, 42);
+            this.resetBtn.TabIndex = 30;
+            this.resetBtn.Text = "Reset";
+            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
             // 
             // siticoneLabel6
             // 
@@ -210,6 +222,7 @@
             // txtTotalPrice
             // 
             this.txtTotalPrice.DecimalPlaces = 2;
+            this.txtTotalPrice.Enabled = false;
             this.txtTotalPrice.Font = new System.Drawing.Font("Satoshi", 12F);
             this.txtTotalPrice.Increment = new decimal(new int[] {
             0,
@@ -218,11 +231,13 @@
             0});
             this.txtTotalPrice.Location = new System.Drawing.Point(54, 529);
             this.txtTotalPrice.Name = "txtTotalPrice";
-            this.txtTotalPrice.PlaceholderText = "Total Price";
+            this.txtTotalPrice.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.txtTotalPrice.PlaceholderText = "";
             this.txtTotalPrice.ReadOnly = true;
             this.txtTotalPrice.Size = new System.Drawing.Size(378, 55);
             this.txtTotalPrice.SuffixText = "";
             this.txtTotalPrice.TabIndex = 15;
+            this.txtTotalPrice.Text = "0.00";
             this.txtTotalPrice.ThousandsSeparator = true;
             // 
             // txtPrice
@@ -240,6 +255,7 @@
             this.txtPrice.Size = new System.Drawing.Size(378, 55);
             this.txtPrice.SuffixText = "";
             this.txtPrice.TabIndex = 14;
+            this.txtPrice.Text = "1.00";
             this.txtPrice.ThousandsSeparator = true;
             this.txtPrice.Value = new decimal(new int[] {
             1,
@@ -274,6 +290,7 @@
             this.txtQuantity.Size = new System.Drawing.Size(375, 55);
             this.txtQuantity.SuffixText = "";
             this.txtQuantity.TabIndex = 11;
+            this.txtQuantity.Text = "1";
             this.txtQuantity.ThousandsSeparator = true;
             this.txtQuantity.Value = new decimal(new int[] {
             1,
@@ -328,18 +345,6 @@
             this.siticoneControlBox1.Size = new System.Drawing.Size(45, 29);
             this.siticoneControlBox1.TabIndex = 6;
             // 
-            // resetBtn
-            // 
-            this.resetBtn.DefaultBack = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(159)))), ((int)(((byte)(159)))));
-            this.resetBtn.Font = new System.Drawing.Font("Satoshi", 12F);
-            this.resetBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.resetBtn.Location = new System.Drawing.Point(252, 602);
-            this.resetBtn.Name = "resetBtn";
-            this.resetBtn.Size = new System.Drawing.Size(132, 42);
-            this.resetBtn.TabIndex = 30;
-            this.resetBtn.Text = "Reset";
-            this.resetBtn.Click += new System.EventHandler(this.resetBtn_Click);
-            // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -353,6 +358,7 @@
             this.Padding = new System.Windows.Forms.Padding(10, 3, 10, 10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddProductForm";
+            this.Load += new System.EventHandler(this.AddProductForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
