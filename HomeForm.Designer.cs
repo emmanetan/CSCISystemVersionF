@@ -73,7 +73,7 @@
             // pieChart1
             // 
             this.pieChart1.BackColor = System.Drawing.Color.Transparent;
-            this.pieChart1.Location = new System.Drawing.Point(295, 297);
+            this.pieChart1.Location = new System.Drawing.Point(81, 274);
             this.pieChart1.Name = "pieChart1";
             this.pieChart1.Size = new System.Drawing.Size(284, 194);
             this.pieChart1.TabIndex = 13;
