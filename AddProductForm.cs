@@ -160,13 +160,6 @@ namespace CSCISystem1._1
             // Refresh the DataGridView or any other UI element to show the newly added product
             // For example, you can call the method to reload the DataGridView here
 
-            
-
-
-
-
-
-
         }
 
         private void resetBtn_Click(object sender, EventArgs e)

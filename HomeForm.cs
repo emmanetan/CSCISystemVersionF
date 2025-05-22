@@ -14,9 +14,9 @@ namespace AntdUIDemo
             InitializeComponent();      
         }
 
-        private void MainWindow_Load(object sender, EventArgs e)
+        private void HomeForm_Load(object sender, EventArgs e)
         {
-
+            welcomeLabel.Text = "Welcome back!";
         }
     }
 }

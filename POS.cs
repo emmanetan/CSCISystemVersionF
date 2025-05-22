@@ -44,8 +44,9 @@ namespace AntdUIDemo
             receiptTextBox.Text += "Tel: 999-685-0001\n";
             receiptTextBox.Text += "----------------------------------------\n";
             receiptTextBox.Text += "Date: " + DateTime.Now + "\n";
+            receiptTextBox.Text += "----------------------------------------\n\n";
+            receiptTextBox.Text += "Item\t\t" + "Qty.\t\t" + "Price\t\n";
             receiptTextBox.Text += "----------------------------------------\n";
-
         }
 
 
