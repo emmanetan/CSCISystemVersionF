@@ -36,6 +36,7 @@
             this.siticonePanel1 = new Siticone.UI.WinForms.SiticonePanel();
             this.mainPanel = new AntdUI.Panel();
             this.menuPanel = new AntdUI.Panel();
+            this.button1 = new AntdUI.Button();
             this.siticonePictureBox1 = new Siticone.UI.WinForms.SiticonePictureBox();
             this.panelDropDown = new System.Windows.Forms.FlowLayoutPanel();
             this.HomeBtn = new Siticone.UI.WinForms.SiticoneRoundedButton();
@@ -46,7 +47,6 @@
             this.SalesBtn = new Siticone.UI.WinForms.SiticoneRoundedButton();
             this.loadingTimer = new System.Windows.Forms.Timer(this.components);
             this.dropDownTimer = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new AntdUI.Button();
             this.titlebar.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             this.menuPanel.SuspendLayout();
@@ -135,6 +135,15 @@
             this.menuPanel.Size = new System.Drawing.Size(303, 671);
             this.menuPanel.TabIndex = 0;
             this.menuPanel.Text = "panel1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(63, 591);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 39);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Temp POS";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // siticonePictureBox1
             // 
@@ -329,15 +338,6 @@
             this.dropDownTimer.Interval = 1;
             this.dropDownTimer.Tick += new System.EventHandler(this.dropDownTimer_Tick);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(63, 591);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 39);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Temp POS";
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // InventoryMangement
             // 
             this.ClientSize = new System.Drawing.Size(1160, 720);
@@ -349,7 +349,7 @@
             this.MinimumSize = new System.Drawing.Size(1024, 640);
             this.Name = "InventoryMangement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AntdUI Demo";
+            this.Text = "WiseMart";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.titlebar.ResumeLayout(false);
             this.siticonePanel1.ResumeLayout(false);
