@@ -44,6 +44,7 @@ namespace CSCISystem1._1
             dayComboBox.SelectedIndex = -1;
             monthComboBox.SelectedIndex = -1;
             yearComboBox.SelectedIndex = -1;
+            pictureBox.Image = null;
 
             txtProductCode.Focus();
         }
@@ -173,6 +174,16 @@ namespace CSCISystem1._1
             ClearField();
         }
 
-        
+        private void uploadDragger_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Load the selected image into the PictureBox
+                pictureBox.Image = Image.FromFile(openFileDialog.FileName);
+                pictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+        }
     }
 }

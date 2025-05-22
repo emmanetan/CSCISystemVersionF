@@ -59,6 +59,9 @@
             this.button3 = new AntdUI.Button();
             this.gridViewProductList = new Siticone.UI.WinForms.SiticoneDataGridView();
             this.productPanel = new AntdUI.Panel();
+            this.panel6 = new AntdUI.Panel();
+            this.siticoneLabel7 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.receiptTextBox = new System.Windows.Forms.RichTextBox();
             this.titlebar.SuspendLayout();
             this.siticonePanel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -67,6 +70,7 @@
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewProductList)).BeginInit();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // titlebar
@@ -115,6 +119,7 @@
             // 
             // siticonePanel1
             // 
+            this.siticonePanel1.Controls.Add(this.panel6);
             this.siticonePanel1.Controls.Add(this.panel5);
             this.siticonePanel1.Controls.Add(this.panel1);
             this.siticonePanel1.Controls.Add(this.productPanel);
@@ -374,9 +379,9 @@
             this.panel1.Controls.Add(this.txtSearchItem);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.gridViewProductList);
-            this.panel1.Location = new System.Drawing.Point(1374, 20);
+            this.panel1.Location = new System.Drawing.Point(974, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(527, 456);
+            this.panel1.Size = new System.Drawing.Size(632, 456);
             this.panel1.TabIndex = 2;
             this.panel1.TabStop = false;
             this.panel1.Text = "panel1";
@@ -390,6 +395,7 @@
             this.txtSearchItem.PlaceholderText = "Search";
             this.txtSearchItem.Size = new System.Drawing.Size(443, 47);
             this.txtSearchItem.TabIndex = 0;
+            this.txtSearchItem.WaveSize = 0;
             // 
             // button3
             // 
@@ -398,9 +404,9 @@
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button3.Icon = ((System.Drawing.Image)(resources.GetObject("button3.Icon")));
             this.button3.JoinRight = true;
-            this.button3.Location = new System.Drawing.Point(17, 8);
+            this.button3.Location = new System.Drawing.Point(17, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(51, 47);
+            this.button3.Size = new System.Drawing.Size(51, 55);
             this.button3.TabIndex = 1;
             // 
             // gridViewProductList
@@ -443,7 +449,7 @@
             this.gridViewProductList.RowHeadersVisible = false;
             this.gridViewProductList.RowTemplate.Height = 40;
             this.gridViewProductList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridViewProductList.Size = new System.Drawing.Size(500, 381);
+            this.gridViewProductList.Size = new System.Drawing.Size(605, 381);
             this.gridViewProductList.TabIndex = 4;
             this.gridViewProductList.Theme = Siticone.UI.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.gridViewProductList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -476,10 +482,45 @@
             this.productPanel.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.productPanel.Location = new System.Drawing.Point(22, 20);
             this.productPanel.Name = "productPanel";
-            this.productPanel.Size = new System.Drawing.Size(1346, 456);
+            this.productPanel.Size = new System.Drawing.Size(945, 456);
             this.productPanel.TabIndex = 1;
             this.productPanel.TabStop = false;
             this.productPanel.Text = "panel5";
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel6.Controls.Add(this.receiptTextBox);
+            this.panel6.Controls.Add(this.siticoneLabel7);
+            this.panel6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panel6.Location = new System.Drawing.Point(1612, 20);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(289, 456);
+            this.panel6.TabIndex = 2;
+            this.panel6.TabStop = false;
+            this.panel6.Text = "panel5";
+            // 
+            // siticoneLabel7
+            // 
+            this.siticoneLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneLabel7.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.siticoneLabel7.Location = new System.Drawing.Point(98, 26);
+            this.siticoneLabel7.Name = "siticoneLabel7";
+            this.siticoneLabel7.Size = new System.Drawing.Size(93, 33);
+            this.siticoneLabel7.TabIndex = 10;
+            this.siticoneLabel7.Text = "Receipt";
+            // 
+            // receiptTextBox
+            // 
+            this.receiptTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.receiptTextBox.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.receiptTextBox.Location = new System.Drawing.Point(25, 61);
+            this.receiptTextBox.Name = "receiptTextBox";
+            this.receiptTextBox.Size = new System.Drawing.Size(244, 392);
+            this.receiptTextBox.TabIndex = 11;
+            this.receiptTextBox.Text = "";
             // 
             // POS
             // 
@@ -505,6 +546,8 @@
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewProductList)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -538,5 +581,8 @@
         private AntdUI.Input input5;
         private AntdUI.Input input4;
         private AntdUI.InputNumber txtCash;
+        private AntdUI.Panel panel6;
+        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel7;
+        private System.Windows.Forms.RichTextBox receiptTextBox;
     }
 }

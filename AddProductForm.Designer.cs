@@ -41,7 +41,6 @@
             this.dayComboBox = new AntdUI.Select();
             this.panel2 = new AntdUI.Panel();
             this.pictureBox = new Siticone.UI.WinForms.SiticonePictureBox();
-            this.uploadDragger1 = new AntdUI.UploadDragger();
             this.txtTotalPrice = new AntdUI.InputNumber();
             this.txtPrice = new AntdUI.InputNumber();
             this.addBtn = new AntdUI.Button();
@@ -50,6 +49,7 @@
             this.txtProductCode = new AntdUI.Input();
             this.titlebar = new AntdUI.PageHeader();
             this.siticoneControlBox1 = new Siticone.UI.WinForms.SiticoneControlBox();
+            this.siticoneRoundedButton1 = new Siticone.UI.WinForms.SiticoneRoundedButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -186,8 +186,8 @@
             // 
             this.panel2.Back = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(235)))), ((int)(((byte)(235)))));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.siticoneRoundedButton1);
             this.panel2.Controls.Add(this.pictureBox);
-            this.panel2.Controls.Add(this.uploadDragger1);
             this.panel2.Location = new System.Drawing.Point(498, 265);
             this.panel2.Name = "panel2";
             this.panel2.Radius = 8;
@@ -204,20 +204,6 @@
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 18;
             this.pictureBox.TabStop = false;
-            // 
-            // uploadDragger1
-            // 
-            this.uploadDragger1.BackColor = System.Drawing.Color.Transparent;
-            this.uploadDragger1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            this.uploadDragger1.Font = new System.Drawing.Font("Satoshi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uploadDragger1.IconRatio = 1.8F;
-            this.uploadDragger1.Location = new System.Drawing.Point(3, 235);
-            this.uploadDragger1.Multiselect = false;
-            this.uploadDragger1.Name = "uploadDragger1";
-            this.uploadDragger1.Size = new System.Drawing.Size(224, 82);
-            this.uploadDragger1.TabIndex = 17;
-            this.uploadDragger1.Text = "Upload";
-            this.uploadDragger1.TextDesc = "";
             // 
             // txtTotalPrice
             // 
@@ -345,6 +331,21 @@
             this.siticoneControlBox1.Size = new System.Drawing.Size(45, 29);
             this.siticoneControlBox1.TabIndex = 6;
             // 
+            // siticoneRoundedButton1
+            // 
+            this.siticoneRoundedButton1.CheckedState.Parent = this.siticoneRoundedButton1;
+            this.siticoneRoundedButton1.CustomImages.Parent = this.siticoneRoundedButton1;
+            this.siticoneRoundedButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.siticoneRoundedButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneRoundedButton1.ForeColor = System.Drawing.Color.White;
+            this.siticoneRoundedButton1.HoveredState.Parent = this.siticoneRoundedButton1;
+            this.siticoneRoundedButton1.Location = new System.Drawing.Point(3, 236);
+            this.siticoneRoundedButton1.Name = "siticoneRoundedButton1";
+            this.siticoneRoundedButton1.ShadowDecoration.Parent = this.siticoneRoundedButton1;
+            this.siticoneRoundedButton1.Size = new System.Drawing.Size(212, 63);
+            this.siticoneRoundedButton1.TabIndex = 19;
+            this.siticoneRoundedButton1.Text = "siticoneRoundedButton1";
+            // 
             // AddProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,7 +381,6 @@
         private AntdUI.InputNumber txtPrice;
         private AntdUI.InputNumber txtTotalPrice;
         private AntdUI.Panel panel2;
-        private AntdUI.UploadDragger uploadDragger1;
         private AntdUI.Select yearComboBox;
         private AntdUI.Select monthComboBox;
         private AntdUI.Select dayComboBox;
@@ -392,5 +392,6 @@
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel4;
         private Siticone.UI.WinForms.SiticonePictureBox pictureBox;
         private AntdUI.Button resetBtn;
+        private Siticone.UI.WinForms.SiticoneRoundedButton siticoneRoundedButton1;
     }
 }
